@@ -2,13 +2,17 @@
   "name": "@mapbox/rehype-prism",
   "version": "0.9.0",
   "description": "rehype plugin to highlight code blocks in HTML with Prism",
-  "main": "index.js",
+  "type": "module",
+  "exports": "./index.js",
+  "engines": {
+    "node": ">=14.13.0"
+  },
   "scripts": {
     "lint": "eslint .",
     "format": "prettier --write '{,lib/,test/}*.js'",
-    "test-jest": "jest",
+    "test-jest": "NODE_OPTIONS=--experimental-vm-modules npx jest",
     "pretest": "npm run lint",
-    "test": "jest",
+    "test": "NODE_OPTIONS=--experimental-vm-modules npx jest",
     "prepare": "husky install"
   },
   "repository": {
@@ -63,8 +67,5 @@
     ],
     "resetMocks": true,
     "testRegex": "/test\\.js$"
-  },
-  "engines": {
-    "node": ">=10"
   }
 }

@@ -1,5 +1,5 @@
 {
-  "extends": "eslint:recommended",
+  "extends": ["eslint:recommended", "plugin:node/recommended"],
   "env": {
     "node": true,
     "es6": true,
@@ -7,7 +7,11 @@
   },
   "plugins": ["node"],
   "rules": {
-    "node/no-unsupported-features": ["error", {"version": 4}],
+    "node/no-unpublished-import": "off",
     "node/no-missing-require": ["error"]
+  },
+  "parserOptions": {
+    "sourceType": "module",
+    "ecmaVersion": 2020
   }
 }

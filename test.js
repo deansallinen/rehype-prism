@@ -1,8 +1,8 @@
 'use strict';
 
-const rehype = require('rehype');
-const dedent = require('dedent');
-const rehypePrism = require('./index');
+import rehype from 'rehype';
+import dedent from 'dedent';
+import rehypePrism from './index';
 
 const processHtml = (html, options) => {
   return rehype()

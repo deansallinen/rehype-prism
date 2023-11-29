@@ -1,10 +1,10 @@
 'use strict';
 
-const visit = require('unist-util-visit');
-const nodeToString = require('hast-util-to-string');
-const refractor = require('refractor');
+import visit from 'unist-util-visit';
+import nodeToString from 'hast-util-to-string';
+import refractor from 'refractor';
 
-module.exports = (options) => {
+export default (options) => {
   options = options || {};
 
   if (options.alias) {
